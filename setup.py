@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="baobab",
-    version="0.1.1",
+    version="0.1.2",
     description="Barebones templating system and static site generator for web designers.",
     url="https://github.com/raphaeltm/baobab",
     author="Raphaël Titsworth-Morin",
