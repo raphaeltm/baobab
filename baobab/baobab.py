@@ -5,7 +5,7 @@ import re
 
 class Page(object):
     """
-    The Page object is used to generate an html page for each baobab.py file
+    The Page object is used to generate an html page for each branch.py file
     """
     def __init__(self, settings_path):
         self.settings_path = settings_path
@@ -98,7 +98,7 @@ class Application(object):
     def __init__(self, root):
         Application.main = self
         self.root = root
-        self.base_settings = __import__("baobab").settings
+        self.base_settings = __import__("branch").settings
 
     def get_layout(self):
         with open(self.get_layout_path(), 'r') as root_layout:
@@ -119,5 +119,5 @@ class Application(object):
 
     def build(self):
         for root, subdirs, files in os.walk(self.root):
-            if "baobab.py" in files:
-                Page(os.path.join(root, "baobab.py")).build()
+            if "branch.py" in files:
+                Page(os.path.join(root, "branch.py")).build()
